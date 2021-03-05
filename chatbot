@@ -1,0 +1,237 @@
+#include <bits/stdc++.h>
+#include <unistd.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi; 
+typedef vector<pair<int,int>> vpi; 
+ 
+#define FOR(i,a,b) for (int i = (a); i < (b); ++i)
+#define F0R(i,a) FOR(i,0,a)
+#define ROF(i,a,b) for (int i = (b)-1; i >= (a); --i)
+#define R0F(i,a) ROF(i,0,a)
+#define trav(a,x) for (auto& a: x)
+ 
+#define PB push_back
+#define f first
+#define s second
+const int MX = 100005;
+bool ok = true;
+
+string current_question;
+string continue_interview = "Do you have any other questions?\n";
+string about_Gatsby_1 = "Tell me something about yourself.";
+string about_Gatsby_2 = "What have you learnt after death?";
+string about_Daisy_1 = "Do you remember Daisy Buchanan?";
+string about_Daisy_2 = "Was everything you did for Daisy Buchanan worth it in the end?";
+string about_Tom_1 = "Do you remember Tom Buchanan?";
+string about_Tom_2 = "Do you know Tom Buchanan indirectly caused your death?";
+string about_Nick_1 = "Do you remember Nick Carraway?";
+string about_Nick_2 = "Do you want to meet Nick again?";
+string about_George = "Have you met George Wilson after the swimming pool incident?";
+string about_green_light = "What was the green light to you?";
+
+void introduction(){
+    cout << "Hi, I'm Jay Gatsby.\n"; sleep (1);
+    cout <<  " ^ ^ \n"; sleep (3);
+    cout << "So you're the reporter from Zanni Press that will be interviewing me today.\n"; sleep (5);
+    cout << "Well... I've stayed in the void long enough that my perspective on some things has changed. Drastically.\n"; sleep(4);
+    cout << "But I will try my best to answer you. "; sleep (4);
+    cout << "Shall we start the interview?\n\n"; sleep(3);
+}
+
+void Gatsby_1(){
+    cout << "Well, my real name is James Gatz.\n\n"; sleep(2);
+    cout << "I had several identities throughout my years of living: a poor farmer from North Dakota, a soldier who served in World War I, a bootlegger, and a millionaire. \n\n"; sleep(5);
+    cout << "In terms of relationship, I yearned for a woman whom I could never be with.\n\n"; sleep(3);
+    cout << "I spent my life chasing after the dream of being with her, but at the exact moment when I was about to reach out and grasp it with my hand,...\n"; sleep(6);
+    cout << "I returned to the starting point.\n\n"; sleep(3);
+    cout << "Basically, I lived a life repeating my own past. \n\n"; sleep(4);
+    cout << "This is just a summary of my life. I hope it gives you a sense of who I was nevertheless.\n\n\n\n"; sleep(5);
+}
+
+void Gatsby_2(){
+    cout << "I've learnt that my life was pretty meaningless.\n\n"; sleep(5);
+    cout << "You see old sport, hundreds of people used to flock to my parties every weekend, but very few came to my funeral.\n"; sleep(4);
+    cout << "Very few actually cared about me.\n\n"; sleep(4);
+    cout << "That makes perfect sense because I was no hero.\n\n"; sleep(4);
+    cout << "The only great thing about my death is that people make really good puns out of it.\n\n"; sleep(5);
+    cout << "Haha. Please don't take any of my jokes too seriously. Just so you know, I am done mourning over my pathetic life.\n\n"; sleep(5);
+    cout << "Wanna hear one right now? \n\n"; sleep(4);
+    cout << "Do you know who my favourite comic character is?\n"; sleep (7);
+    cout << "Deadpool.\n\n"; sleep(5);
+    cout << "Hahaha lol. Alright, I'll stop. Let's move on.\n\n\n\n"; sleep(4);
+}
+
+void Daisy_1(){
+    cout << "DAISY !!...";
+    cout << "\n\n"; 
+    sleep(2);
+
+    cout << "Yes, we were lovers.\n"; sleep(3);
+    cout << "I encountered the love of my life, the beautiful Daisy Buchanan, in military.\n\n\n"; sleep(4);
+    cout << "     * *   * *  \n"; 
+    cout << "    *    *    * \n"; 
+    cout << "      *     *   \n"; 
+    cout << "       *   *    \n"; 
+    cout << "         *      \n\n"; sleep (3);
+    cout << "Using the manners of the upper class learnt from an old friend of mine, I successfully captured her heart.\n\n"; sleep(5);
+    cout << "... But then I had to leave for war.\n"; sleep(3);
+    cout << "You see old sport, Daisy said she would wait for me, so I fought in the war, earned a medal and was even made an officer.\n\n"; sleep(6);
+    cout << "However, by the time I returned to America... \n"; sleep(3);
+    cout << "I learnt that she had already been married to Tom Buchanan. \n\n"; sleep(5);
+    cout << "Old sport, it was at that time that I came to realize... that I never truly felt accepted by her.\n\n"; sleep(5);
+    cout << "I always hid the fact that I was nothing but a poor farmer's son..."; sleep(3); cout << " behind the military uniform...\n\n"; sleep(5);
+    cout << "She's old money, you see. I needed to risk all I've got to climb the social ladder and reach her level.\n\n"; sleep (7);
+    cout << "I hope that the above answers your questions satisfactorily.\n\n\n\n"; sleep(5);
+}
+
+void Daisy_2(){
+    cout << "Well, I took a lot of risks mainly to get more money.\n\n"; sleep(4);
+    cout << "All the illegal activities I was involved in can get me a life sentence.\n\n"; sleep(5);
+    cout << "Therefore I became very careful. I always put everything that I needed to accomplish for the day down on a piece of paper and stuck it onto the back of a book.\n\n"; sleep(7);
+    cout << "My risks were calculated.\n"; sleep(3);
+    cout << "But old sport, didn't I just suck at Math?\n\n"; sleep(5);
+    cout << "I thought disappearing for 5 years and acquiring a large fortune through unscrupulous means, then buying the mansion across the bay from the girl I love would impress her.\n\n"; sleep(6);
+    cout << "I thought dedicating my life to throwing lavish parties and earning her affection while utterly ignoring the family she had built was okay.\n\n"; sleep(6);
+    cout << "I thought dying in the pool of my own illustrious mansion was not so bad, because at least she called back.\n\n"; sleep(6);
+    cout << "I was never satisfied with being nothing but her lover. I wanted her to look at me and me only.\n\n"; sleep(6);
+    cout << "But in the end, all the risks I took couldn't even get me a single flower from Daisy for my funeral.\n\n\n\n"; sleep(4);
+}
+
+void Tom_1(){
+    cout << "I've got nothing to say about him. \n\n"; sleep(5);
+    cout << "Fine.\n\n"; sleep(2);
+    cout << "Tom. Is. A. Douchebag. End of story. \n\n"; sleep(5);
+    cout << "Well, he's old money; he's got Daisy's love; he's got everything.\n\n"; sleep (5);
+    cout << "Still, as far as I remember, he loved to trample on other people's lives. \n\n"; sleep(3);
+    cout << "Most importantly...h-he...\n"; sleep(4);
+    cout << "H-HE...\n"; sleep(3);
+    cout << "H-HE... HE!!\n"; sleep(3);
+    cout << "HE REVEALED THE TRUTH ABOUT ME AND MY BUSINESS TO DAISY!!\n\n"; sleep(4);
+    cout << "HE RUINED MY IMAGE! HE RUINED MY RELATIONSHIP WITH DAISY! HE RUINED MY LIFE!!\n\n"; sleep(8);
+    cout << ".\n"; sleep(3);
+    cout << "..\n"; sleep(3);
+    cout << "...\n\n"; sleep(3);
+    cout << "Please excuse my rudeness.\n\n"; sleep(3);
+    cout << "I'm unable to continue this discussion.\n\n\n\n"; sleep(4);
+}
+
+void Tom_2(){
+    cout << "Yes... I learnt that in my first interview with one of your colleagues.\n\n"; sleep(4);
+    cout << "If I'm not mistaken... Tom told George that I drove the car that hit Myrtle, so George shot me.\n\n"; sleep(5);
+    cout << "I was foolish enough to take the blame for Daisy anyway.\n\n"; sleep(5);
+    cout << "But old sport, is it funny how people like Tom can just simply screw up other people's lives and retreat behind their nest of money? \n\n"; sleep(8);
+    cout << "The only place where Tom belongs: \n\n"; sleep(3);
+    cout << "      * * *   \n"; 
+    cout << "    *       * * \n"; 
+    cout << "    *  HELL * * \n"; 
+    cout << "    *       * * \n"; 
+    cout << "    *       * * \n"; 
+    cout << "    *********** \n\n"; sleep(8);
+    cout << "But... to be completely honest with you...\n\n"; sleep(3);
+    cout << "Daisy was just the same kind of person as Tom. She never wanted to run away with me.\n\n"; sleep(5);
+    cout << "She chose to run away with her money and her carelessness.\n\n"; sleep(9);
+    cout << "I've stayed in the void for so long that I don't even care to deny it anymore. Let us move on to the next question.\n\n\n\n"; sleep(5);
+}
+
+void George(){
+    cout << "I met George Wilson not long after I got shot.\n\n"; sleep(3);
+    cout << "But that man looked like he'd been dead long before he got here.\n\n";sleep(4);
+    cout << "Regardless of how many times I cursed, yelled or screamed at him, he wouldn't tell me why he murdered me.\n\n"; sleep(5);
+    cout << "After a while, he simply dissipated into the void.\n"; sleep(5);
+    cout << "As a consequence, I fell into despair. \n\n"; sleep(5);
+    cout << "George had accomplished what he wanted to before he died.\n"; sleep(3);
+    cout << "But for me, ...\n"; sleep(3);
+    cout << "my Daisy...\n"; sleep(3);
+    cout << "my dreams... \n\n"; sleep(3);
+    cout << "were the things that I couldn't give up on.\n\n"; sleep(6);
+    cout << "However, the time in the void spent with interesting folks like you made me come to some important realizations.\n\n"; sleep(5);
+    cout << "I've spent my entire life chasing after my dream, but little did I know that they were already behind me.\n\n"; sleep(5);
+    cout << "So I thought it was a good idea to stay in the void and educate young and reckless teenagers like you.\n\n"; sleep(7);
+    cout << "Quiz time: Did you know how my murder went?\n"; sleep(5);
+    cout << "Swimmingly :) \n\n"; sleep(3);
+    cout << "Haha, I never get tired of this! I hope this answers your question though.\n\n\n\n"; sleep(2);
+}
+
+void Green_light(){
+    cout << "Ah yes, the green light...\n\n"; sleep(4);
+    cout << "\033[0;32m         *   \n"; 
+    cout << "        * *    \n"; 
+    cout << "      *     *   \n"; 
+    cout << "        * *    \n"; 
+    cout << "         *     \n\n\033[0m"; sleep(4);
+    cout << "The green light was the imaginary perfect future that I longed for my entire life. I've been reaching out to it for who knows how long...\n\n"; sleep(6);
+    cout << "Well, old sport, people usually say you miss 20 percent of the shots you take, but miss 100 percent of the shots you don't take.\n\n"; sleep (6);
+    cout << "If there was a slightest chance that I could end up in that future, I'd try to take hold of it with all of my might.\n\n"; sleep(5);
+    cout << "I believe other people feel the same way about it.\n\n"; sleep(3);
+    cout << "We pursue happiness, success, money and romance.\n"; sleep(4);
+    cout << "We strive so hard to overcome our individual pasts.\n"; sleep(5);
+    cout << "But we always end up back at our starting point. Regardless of how much wealth we've gained, we will still be striving to have more.\n\n\n\n"; sleep(6);
+}
+
+void Nick_1(){
+    cout << "Of course I do.\n\n"; sleep(3);
+    cout << "He was a smart and easy-going person. When he's with you, you always feel at ease; you feel like sharing all kinds of things with him.\n\n"; sleep (6); 
+    cout << "At first, I only used him so that I could approach Daisy.\n\n"; sleep (3);
+    cout << "I lied to him about my past at first: I told him that I was the sole surviving member of a wealthy family.\n"; sleep(4);
+    cout << "I know! Embarrassing, right?\n\n"; sleep(4);
+    cout << "He was a reliable person. Nick and Jordan actually helped me reunite with Daisy.\n\n"; sleep(5);
+    cout << "Most importantly, Nick was the only one whom I confided in about my past.\n\n"; sleep(6);
+    cout << "During the very early morning hours after Myrtle's accident, I explained to him how I lied about my background in order to date Daisy...\n\n"; sleep(4);
+    cout << "I told him about how I was constantly enchanted by Daisy and her wealth...\n\n";  sleep(4);
+    cout << "I described to him how I searched Louisville east and west, thinking that I'd find Daisy if I searched hard enough...\n\n";  sleep(6);
+    cout << "He'd be listening to my stories every time, regardless of how ridiculous they might sound. At that time, I knew, that he knew, that I was being genuine.\n\n";  sleep(7);
+    cout << "Sorry for being so talkative all of a sudden. I'd love to tell more if you'd like.\n\n\n\n"; sleep(3);
+}
+
+void Nick_2(){
+    cout << "The moment George Wilson left the void, I felt pathetic and was desperate to get out.\n\n"; sleep(4);
+    cout << "But after seeing Nick trying so hard to invite people to my funeral, I shed tears.\n\n"; sleep(4);
+    cout << "I felt confused because I didn't know why Nick, out of all people, would care for someone like me.\n\n"; sleep(4);
+    cout << "Nick was my only true friend. If only I had realized this sooner...\n\n"; sleep(8);
+    cout << "Been living in the void for this long, I thought I'd be able to give up on all connections to my previous life.\n\n"; sleep(4);
+    cout << "But not being able to say a proper goodbye to Nick still remains my biggest regret.\n\n"; sleep(3);
+    cout << "Old sport, I'd trade anything for a chance to meet Nick again.\n\n\n\n"; sleep(7);
+}
+
+void auto_run(){
+    cout <<"\033[0;32mTell me something about yourself.\033[0m" << "\n\n\n"; sleep(4); Gatsby_1(); 
+    cout <<"\033[0;32mWhat have you learnt after death?\033[0m" << "\n\n\n"; sleep(4); Gatsby_2();
+    cout <<"\033[0;32mDo you remember Daisy Buchanan?\033[0m" << "\n\n\n"; sleep(4); Daisy_1();
+    cout <<"\033[0;32mWas everything you did for Daisy Buchanan worth it in the end?\033[0m" << "\n\n\n"; sleep(4); Daisy_2();
+    cout <<"\033[0;32mDo you remember Tom Buchanan?\033[0m"<< "\n\n\n"; sleep (4); Tom_1();
+    cout <<"\033[0;32mDo you know Tom Buchanan indirectly caused your death?\033[0m" << "\n\n\n"; sleep (4); Tom_2();
+    cout <<"\033[0;32mHave you met George Wilson after the swimming pool incident?\033[0m" << "\n\n\n"; sleep(4); George();
+    cout <<"\033[0;32mWhat was the green light to you?\033[0m" << "\n\n\n"; sleep(4); Green_light();
+    cout <<"\033[0;32mDo you remember Nick Carraway?\033[0m" << "\n\n\n"; sleep(4); Nick_1();
+    cout <<"\033[0;32mDo you want to meet Nick again?\033[0m" << "\n\n\n"; sleep(4); Nick_2();
+    cout << "That's all I can tell you for now. Till next time, old sport.";
+}
+
+int main() {
+    introduction();
+    while (ok){
+        cout << "\033[0;31mEnter your question here: \033[0m"; 
+        getline(cin, current_question);
+        cout << "\n";
+        if (current_question == "0") {auto_run(); break;}
+        else if (current_question == "No"){ ok = false; break;}
+        else if (current_question == about_Gatsby_1 || current_question == "1") Gatsby_1();
+        else if (current_question == about_Gatsby_2 || current_question == "2") Gatsby_2();
+        else if (current_question == about_Daisy_1 || current_question == "3") Daisy_1();
+        else if (current_question == about_Daisy_2 || current_question == "4") Daisy_2();
+        else if (current_question == about_Tom_1 || current_question == "5")  Tom_1();
+        else if (current_question == about_Tom_2 || current_question == "6") Tom_2();
+        else if (current_question == about_George || current_question == "7")  George();
+        else if (current_question == about_green_light || current_question == "8") Green_light(); 
+        else if (current_question == about_Nick_1 || current_question == "9")  Nick_1();
+        else if (current_question == about_Nick_2 || current_question == "10")  Nick_2();
+        else cout << "I'm unable to answer this question right now, old sport. ";
+        cout << continue_interview;
+    }
+    
+    if (ok == false){
+        cout << "Alright then. Till next time, old sport.";
+    }
+}
